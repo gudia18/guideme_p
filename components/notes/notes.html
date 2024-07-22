@@ -3,22 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Notes</title>
+    <title>Study Notes</title>
     <link rel="stylesheet" href="notes.css">
+    <style>
+        
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .links-box {
+            margin-top: 10px;
+        }
+
+        .toggle-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+        }
+
+        .toggle-button:hover {
+            background-color: #0056b3;
+        }
+
+        .links-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+
+        .links-list li {
+            margin-bottom: 10px;
+        }
+
+        .links-list a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .links-list a:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Download Notes</h1>
-        <p>Access a variety of study notes to boost your learning.</p>
+        <h1>Study Notes</h1>
+        <p>Find curated notes for various educational topics</p>
     </header>
-    <main>
-        <ul>
-            <li><a href="path/to/note1.pdf" target="_blank">Note 1 - Subject</a></li>
-            <li><a href="path/to/note2.pdf" target="_blank">Note 2 - Subject</a></li>
-            <li><a href="path/to/note3.pdf" target="_blank">Note 3 - Subject</a></li>
-            <li><a href="path/to/note4.pdf" target="_blank">Note 4 - Subject</a></li>
-            <!-- Add more notes as needed -->
-        </ul>
+
+    <main class="grid-container">
+        <!-- Programming Language Notes -->
+        <div class="category-card1 card" data-progress="75">
+            <h3>Programming Language Notes</h3>
+            <div class="links-box">
+                <button class="toggle-button" data-target="cpp-notes">Python</button>
+                <ol id="cpp-notes" class="links-list hidden">
+                    <a href="path/to/python/notes1.pdf"><li>Python Basics</li></a>
+                    <a href="path/to/python/notes2.pdf"><li>Advanced Python</li></a>
+                </ol>
+            </div>
+            <div class="links-box">
+                <button class="toggle-button" data-target="java-notes">C++</button>
+                <ol id="java-notes" class="links-list hidden">
+                    <a href="path/to/cpp/notes1.pdf"><li>C++ Basics</li></a>
+                    <a href="path/to/cpp/notes2.pdf"><li>Advanced C++</li></a>
+                </ol>
+            </div>
+            <div class="links-box">
+                <button class="toggle-button" data-target="python-notes">Java</button>
+                <ol id="python-notes" class="links-list hidden">
+                    <a href="path/to/java/notes1.pdf"><li>Java Basics</li></a>
+                    <a href="path/to/java/notes2.pdf"><li>Advanced Java</li></a>
+                </ol>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-bar-inner"></div>
+            </div>
+        </div>
+
+        <!-- DSA Notes -->
+        <div class="category-card2 card" data-progress="50">
+            <h3>Data Structure & Algorithms Notes</h3>
+            <div class="links-box">
+                <button class="toggle-button" data-target="dsa-cpp-notes">C++</button>
+                <ol id="dsa-cpp-notes" class="links-list hidden">
+                    <a href="path/to/dsa/cpp/notes1.pdf"><li>DSA with C++ Basics</li></a>
+                    <a href="path/to/dsa/cpp/notes2.pdf"><li>Advanced DSA with C++</li></a>
+                </ol>
+            </div>
+            <div class="links-box">
+                <button class="toggle-button" data-target="dsa-java-notes">Java</button>
+                <ol id="dsa-java-notes" class="links-list hidden">
+                    <a href="path/to/dsa/java/notes1.pdf"><li>DSA with Java Basics</li></a>
+                    <a href="path/to/dsa/java/notes2.pdf"><li>Advanced DSA with Java</li></a>
+                </ol>
+            </div>
+            <div class="links-box">
+                <button class="toggle-button" data-target="dsa-python-notes">Python</button>
+                <ol id="dsa-python-notes" class="links-list hidden">
+                    <a href="path/to/dsa/python/notes1.pdf"><li>DSA with Python Basics</li></a>
+                    <a href="path/to/dsa/python/notes2.pdf"><li>Advanced DSA with Python</li></a>
+                </ol>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-bar-inner"></div>
+            </div>
+        </div>
+
+        <!-- Web Development Notes -->
+        <div class="category-card3 card" data-progress="30">
+            <h3>Web Development Notes</h3>
+            <div class="links-box">
+                <button class="toggle-button" data-target="frontend-notes">Frontend</button>
+                <ol id="frontend-notes" class="links-list hidden">
+                    <a href="path/to/frontend/notes1.pdf"><li>HTML & CSS Basics</li></a>
+                    <a href="path/to/frontend/notes2.pdf"><li>Advanced HTML & CSS</li></a>
+                </ol>
+            </div>
+            <div class="links-box">
+                <button class="toggle-button" data-target="backend-notes">Backend</button>
+                <ol id="backend-notes" class="links-list hidden">
+                    <a href="path/to/backend/notes1.pdf"><li>Node.js Basics</li></a>
+                    <a href="path/to/backend/notes2.pdf"><li>Advanced Node.js</li></a>
+                </ol>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-bar-inner"></div>
+            </div>
+        </div>
+
+        <!-- CN Fundamentals Notes -->
+        <div class="category-card4 card" data-progress="60">
+            <h3>CN Fundamentals Notes</h3>
+            <div class="links-box">
+                <button class="toggle-button" data-target="cn-notes">Computer Networks</button>
+                <ol id="cn-notes" class="links-list hidden">
+                    <a href="path/to/cn/notes1.pdf"><li>Computer Networks Basics</li></a>
+                    <a href="path/to/cn/notes2.pdf"><li>Advanced Computer Networks</li></a>
+                </ol>
+            </div>
+            <div class="links-box">
+                <button class="toggle-button" data-target="os-notes">Operating Systems</button>
+                <ol id="os-notes" class="links-list hidden">
+                    <a href="path/to/os/notes1.pdf"><li>Operating Systems Basics</li></a>
+                    <a href="path/to/os/notes2.pdf"><li>Advanced Operating Systems</li></a>
+                </ol>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-bar-inner"></div>
+            </div>
+        </div>
+
+        <!-- UI/UX Design Notes -->
+        <div class="category-card5 card" data-progress="40">
+            <h3>Designing - UI/UX Notes</h3>
+            <div class="links-box">
+                <button class="toggle-button" data-target="figma-notes">Figma</button>
+                <ol id="figma-notes" class="links-list hidden">
+                    <a href="path/to/figma/notes1.pdf"><li>Figma Basics</li></a>
+                    <a href="path/to/figma/notes2.pdf"><li>Advanced Figma</li></a>
+                </ol>
+            </div>
+            <div class="links-box">
+                <button class="toggle-button" data-target="canva-notes">Canva</button>
+                <ol id="canva-notes" class="links-list hidden">
+                    <a href="path/to/canva/notes1.pdf"><li>Canva Basics</li></a>
+                    <a href="path/to/canva/notes2.pdf"><li>Advanced Canva</li></a>
+                </ol>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-bar-inner"></div>
+            </div>
+        </div>
     </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+           
+
+            // Toggle button functionality
+            const toggleButtons = document.querySelectorAll(".toggle-button");
+            toggleButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const targetId = button.getAttribute("data-target");
+                    const targetList = document.getElementById(targetId);
+                    targetList.classList.toggle("hidden");
+                });
+            });
+        });
+    </script>
 </body>
 </html>

@@ -3,25 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interview Preparation</title>
+    <title>On-Campus Interview</title>
     <link rel="stylesheet" href="notes.css">
     <style>
-        /* Progress bar styles */
-        .progress-bar {
-            width: 100%;
-            background-color: #f3f3f3;
-            border-radius: 5px;
-            overflow: hidden;
-            margin-top: 10px;
-        }
-
-        .progress-bar-inner {
-            height: 10px;
-            background-color: #4caf50;
-            width: 0;
-        }
-
-        /* General styles */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -36,8 +20,6 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             padding: 1em;
             transition: transform 0.2s;
-            text-align: center;
-            cursor: pointer;
         }
 
         .card:hover {
@@ -51,19 +33,31 @@
         .category-card2 {
             background-color: #FDECEF;
         }
+
+        /* Other styles */
+        a {
+            color: #1AB79D;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Interview Preparation</h1>
-        <p>Select a category to get tips and resources.</p>
+        <h1>On-Campus Interview Resources</h1>
+        <p>Find tips and resources for on-campus interviews.</p>
     </header>
     <main class="grid-container">
-        <div class="category-card1 card" onclick="window.location.href='oncampus.html'">
-            <h3>On-Campus Interview</h3>
+        <div class="category-card1 card">
+            <h3><a href="https://www.example.com/ontips1" target="_blank">Preparing Your Resume</a></h3>
         </div>
-        <div class="category-card2 card" onclick="window.location.href='offcampus.html'">
-            <h3>Off-Campus Interview</h3>
+        <div class="category-card2 card">
+            <h3><a href="https://www.example.com/ontips2" target="_blank">Common Interview Questions</a></h3>
+        </div>
+        <div class="category-card1 card">
+            <h3><a href="https://www.example.com/ontips3" target="_blank">Interview Etiquette</a></h3>
+        </div>
+        <div class="category-card2 card">
+            <h3><a href="https://www.example.com/ontips4" target="_blank">Follow-Up After Interviews</a></h3>
         </div>
     </main>
 </body>

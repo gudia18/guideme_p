@@ -5,6 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackathons</title>
     <link rel="stylesheet" href="hack.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #282c34;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            margin-top: 0;
+        }
+
+        .current-hackathons .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .current-hackathons .card h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .current-hackathons .card a {
+            text-decoration: none;
+            color: #1AB79D;
+            font-weight: bold;
+        }
+
+        .current-hackathons .card a:hover {
+            text-decoration: underline;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            margin-bottom: 10px;
+        }
+
+        .section ul li a {
+            text-decoration: none;
+            color: #1AB79D;
+            font-weight: bold;
+        }
+
+        .section ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -12,13 +93,27 @@
         <p>Engage in innovative challenges to solve real-world problems.</p>
     </header>
     <main>
-        <ul>
-            <li><a href="https://www.example.com/hackathon1" target="_blank">Hackathon 1 - Description</a></li>
-            <li><a href="https://www.example.com/hackathon2" target="_blank">Hackathon 2 - Description</a></li>
-            <li><a href="https://www.example.com/hackathon3" target="_blank">Hackathon 3 - Description</a></li>
-            <li><a href="https://www.example.com/hackathon4" target="_blank">Hackathon 4 - Description</a></li>
-            <!-- Add more hackathons as needed -->
-        </ul>
+        <section class="section current-hackathons" id="current-hackathons">
+            <h2>Current Hackathons</h2>
+            <div class="card">
+                <h3><a href="https://www.example.com/current-hackathon1" target="_blank">Current Hackathon 1</a></h3>
+                <p>Description: Participate in this exciting challenge to showcase your skills.</p>
+            </div>
+            <div class="card">
+                <h3><a href="https://www.example.com/current-hackathon2" target="_blank">Current Hackathon 2</a></h3>
+                <p>Description: Join this hackathon to solve real-world problems with innovative solutions.</p>
+            </div>
+            <!-- Add more current hackathons as needed -->
+        </section>
+
+        <section class="section" id="other-hackathons">
+            <h2>Other Hackathons</h2>
+            <ul>
+                <li><a href="https://www.example.com/other-hackathon1" target="_blank">Other Hackathon 1 - Description</a></li>
+                <li><a href="https://www.example.com/other-hackathon2" target="_blank">Other Hackathon 2 - Description</a></li>
+                <!-- Add more other hackathons as needed -->
+            </ul>
+        </section>
     </main>
 </body>
 </html>

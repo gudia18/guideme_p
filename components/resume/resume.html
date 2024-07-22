@@ -3,24 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume/CV Tips</title>
+    <title>Resume/CV Analyzer</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #1AB79D;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .upload-form {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .upload-form h2 {
+            margin-top: 0;
+        }
+
+        .upload-form input[type="file"], .upload-form textarea {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .upload-form button {
+            background-color: #1AB79D;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .upload-form button:hover {
+            background-color: #128f7b;
+        }
+
+        .result-container {
+            margin-top: 20px;
+        }
+
+        .result-container h3 {
+            margin-top: 0;
+        }
+
+        .result-container .score {
+            font-weight: bold;
+        }
+
+        .result-container .improvement-points {
+            margin-top: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .video-links {
+            margin-top: 30px;
+        }
+
+        .video-links h2 {
+            text-align: center;
+        }
+
+        .video-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            margin: 10px 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .video-card a {
+            color: #1AB79D;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .video-card a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Resume/CV Tips</h1>
-        <p>Get tips to make your resume company-specific and write effective cover letters.</p>
+        <h1>Resume/CV Analyzer</h1>
+        <p>Upload your resume and provide the company-specific job description to get an ATS score and improvement points.</p>
     </header>
     <main>
-        <ul>
-            <li><a href="https://www.example.com/resume-tip1" target="_blank">Tip 1 - Tailor Your Resume to the Job</a></li>
-            <li><a href="https://www.example.com/resume-tip2" target="_blank">Tip 2 - Highlight Your Achievements</a></li>
-            <li><a href="https://www.example.com/resume-tip3" target="_blank">Tip 3 - Use Keywords from the Job Description</a></li>
-            <li><a href="https://www.example.com/resume-tip4" target="_blank">Tip 4 - Keep It Concise and Clear</a></li>
-            <li><a href="https://www.example.com/cover-letter-tip1" target="_blank">Cover Letter Tip 1 - Address the Hiring Manager by Name</a></li>
-            <li><a href="https://www.example.com/cover-letter-tip2" target="_blank">Cover Letter Tip 2 - Showcase Your Skills and Experience</a></li>
-            <!-- Add more tips as needed -->
-        </ul>
+        <div class="upload-form">
+            <h2>Upload Your Resume and Provide Job Description</h2>
+            <form id="resume-form" action="#" method="post" enctype="multipart/form-data">
+                <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
+                <textarea id="job-description" name="job-description" rows="5" placeholder="Enter the job description here..." required></textarea>
+                <button type="submit">Analyze Resume</button>
+            </form>
+            <div class="result-container" id="result-container" style="display: none;">
+                <h3>ATS Score</h3>
+                <p class="score" id="ats-score">--</p>
+                <h3>Improvement Points</h3>
+                <div class="improvement-points" id="improvement-points">
+                    <ul id="points-list"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="video-links">
+            <h2>Helpful Videos to Improve Your Resume</h2>
+            <div class="video-card">
+                <a href="https://www.youtube.com/watch?v=example1" target="_blank">How to Tailor Your Resume for ATS</a>
+            </div>
+            <div class="video-card">
+                <a href="https://www.youtube.com/watch?v=example2" target="_blank">Top 5 Resume Writing Tips</a>
+            </div>
+            <div class="video-card">
+                <a href="https://www.youtube.com/watch?v=example3" target="_blank">Common Resume Mistakes to Avoid</a>
+            </div>
+            <!-- Add more video cards as needed -->
+        </div>
     </main>
+    <script>
+        document.getElementById('resume-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Collect form data
+            const resume = document.getElementById('resume').files[0];
+            const jobDescription = document.getElementById('job-description').value;
+
+            if (resume && jobDescription) {
+                // Simulate resume analysis with job description (replace with actual API call)
+                simulateResumeAnalysis(resume, jobDescription);
+            }
+        });
+
+        function simulateResumeAnalysis(resume, jobDescription) {
+            // Simulate a response from a resume analysis API
+            const atsScore = Math.floor(Math.random() * 100) + 1; // Random ATS score between 1 and 100
+            const improvementPoints = [
+                "Include more keywords from the job description.",
+                "Add specific achievements and metrics.",
+                "Improve formatting and readability.",
+                "Ensure the resume is tailored to the job you are applying for."
+            ];
+
+            document.getElementById('ats-score').innerText = atsScore + '/100';
+            const pointsList = document.getElementById('points-list');
+            pointsList.innerHTML = '';
+            improvementPoints.forEach(point => {
+                const li = document.createElement('li');
+                li.innerText = point;
+                pointsList.appendChild(li);
+            });
+
+            document.getElementById('result-container').style.display = 'block';
+        }
+    </script>
 </body>
 </html>

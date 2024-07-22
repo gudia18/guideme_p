@@ -5,13 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browse Courses</title>
     <link rel="stylesheet" href="courses.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #282c34;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .course-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .course-card h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .course-card p {
+            margin: 5px 0;
+        }
+
+        .course-card .premium {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #f44336;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+        }
+
+        .course-card .premium::before {
+            content: url('lock-icon.png'); /* Make sure to add the correct path to your lock icon */
+            margin-right: 5px;
+        }
+
+        .course-card a {
+            text-decoration: none;
+            color: #1AB79D;
+            font-weight: bold;
+        }
+
+        .course-card a:hover {
+            text-decoration: underline;
+        }
+
+        .course-card .details {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Browse Courses</h1>
     </header>
     <main>
-        <section class="course">
+        <section class="course-card">
             <h2>Build Responsive Real-World Websites with HTML and CSS</h2>
             <p><strong>Rating:</strong> 9.5/10</p>
             <p><strong>Price:</strong> Free</p>
@@ -19,23 +96,25 @@
             <p><strong>Level:</strong> Beginner</p>
             <p><strong>Instructor:</strong> Apna College</p>
         </section>
-        
-        <section class="course">
+
+        <section class="course-card premium">
             <h2>C++ Programming for Software Developers</h2>
             <p><strong>Duration:</strong> 18 Weeks</p>
             <p><strong>Level:</strong> Beginner</p>
             <p><strong>Instructor:</strong> Raj VikramAditya || Striver A-Z Sheet</p>
+            <div class="premium">Premium</div>
         </section>
-        
-        <section class="course">
+
+        <section class="course-card premium">
             <h2>Data Structures & Algorithms</h2>
             <p><strong>Rating:</strong> 10/10</p>
             <p><strong>Price:</strong> Free</p>
             <p><strong>Modules:</strong> 18</p>
             <p><strong>Instructor:</strong> Raj VikramAditya || Striver A-Z Sheet</p>
+            <div class="premium">Premium</div>
         </section>
-        
-        <section class="course">
+
+        <section class="course-card">
             <h2>The Complete Camtasia Course for Content Creators</h2>
             <p><strong>Duration:</strong> 15 Weeks</p>
             <p><strong>Level:</strong> Beginner</p>
@@ -43,23 +122,22 @@
             <p><strong>Lessons:</strong> 149</p>
             <p><strong>Instructor:</strong> Love Babbar | CodeHelp</p>
         </section>
-        
-        <section class="course">
+
+        <section class="course-card">
             <h2>Web Development Bootcamp</h2>
             <p><strong>Duration:</strong> 12 Weeks</p>
             <p><strong>Level:</strong> Intermediate</p>
             <p><strong>Instructor:</strong> Traversy Media</p>
         </section>
-        
-        <section class="course">
+
+        <section class="course-card premium">
             <h2>Machine Learning A-Z™: Hands-On Python & R In Data Science</h2>
             <p><strong>Duration:</strong> 10 Weeks</p>
             <p><strong>Level:</strong> Advanced</p>
             <p><strong>Rating:</strong> 9.5/10</p>
             <p><strong>Instructor:</strong> Kirill Eremenko, Hadelin de Ponteves, SuperDataScience Team</p>
+            <div class="premium">Premium</div>
         </section>
-        
-        <!-- Add more courses as needed -->
     </main>
 </body>
 </html>
