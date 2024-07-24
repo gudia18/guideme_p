@@ -3,68 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interview Preparation</title>
-    <link rel="stylesheet" href="notes.css">
-    <style>
-        /* Progress bar styles */
-        .progress-bar {
-            width: 100%;
-            background-color: #f3f3f3;
-            border-radius: 5px;
-            overflow: hidden;
-            margin-top: 10px;
-        }
-
-        .progress-bar-inner {
-            height: 10px;
-            background-color: #4caf50;
-            width: 0;
-        }
-
-        /* General styles */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .card {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 1em;
-            transition: transform 0.2s;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .category-card1 {
-            background-color: #E8F7F5;
-        }
-
-        .category-card2 {
-            background-color: #FDECEF;
-        }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <title>Scholarship</title>
 </head>
 <body>
-    <header>
-        <h1>Interview Preparation</h1>
-        <p>Select a category to get tips and resources.</p>
-    </header>
-    <main class="grid-container">
-        <div class="category-card1 card" onclick="window.location.href='oncampus.html'">
-            <h3>On-Campus Interview</h3>
+    <section class="section category" aria-label="category">
+        <div class="container">
+
+            <h1 class="h1 section-title">
+                Internships and  <span class="span"> 
+                 Placements</span>
+            </h1>
+
+            <p class="section-text">
+                "Believe in your potential, work hard, and achieve your dreams."
+            </p>
+
+            <ul class="grid-list">
+
+                <li>
+                    <div class="category-card"
+                        style="--color: 170, 75%, 41%">
+
+                        <div class="card-icon">
+                            <img
+                                src="./assets/images/category-1.svg"
+                                width="40" height="40"
+                                loading="lazy"
+                                alt="Online Degree Programs"
+                                class="img">
+                        </div>
+
+                        <h3 class="h3">
+                            <a href="./first.html"
+                                class="card-title">First Year</a>
+                        </h3>
+
+                        <p class="card-text">
+                            Find curated links to valuable
+                            educational resources.
+                        </p>
+
+                        <span class="card-badge">12 Links</span>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="category-card"
+                        style="--color: 351, 83%, 61%">
+
+                        <div class="card-icon">
+                            <img
+                                src="./assets/images/category-2.svg"
+                                width="40" height="40"
+                                loading="lazy"
+                                alt="Non-Degree Programs"
+                                class="img">
+                        </div>
+
+                        <h3 class="h3">
+                            <a href="./second.html"
+                                class="card-title">Second Year</a>
+                        </h3>
+
+                        <p class="card-text">
+                            Access a variety of study notes to boost
+                            your learning.
+                        </p>
+
+                        <span class="card-badge">9 Subjects</span>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="category-card"
+                        style="--color: 229, 75%, 58%">
+
+                        <div class="card-icon">
+                            <img
+                                src="./assets/images/category-3.svg"
+                                width="40" height="40"
+                                loading="lazy"
+                                alt="Off-Campus Programs"
+                                class="img">
+                        </div>
+
+                        <h3 class="h3">
+                            <a
+                                href="./third.html"
+                                class="card-title">Third Year</a>
+                        </h3>
+
+                        <p class="card-text">
+                            Get tips and resources to ace your
+                            interviews - ofcampus/oncampus.
+                        </p>
+
+                        <span class="card-badge">5 Resources</span>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="category-card"
+                        style="--color: 42, 94%, 55%">
+
+                        <div class="card-icon">
+                            <img
+                                src="./assets/images/category-4.svg"
+                                width="40" height="40"
+                                loading="lazy"
+                                alt="Hybrid Distance Programs"
+                                class="img">
+                        </div>
+
+                        <h3 class="h3">
+                            <a
+                                href="./four.html"
+                                class="card-title">Fourth Year</a>
+                        </h3>
+
+                        <p class="card-text">
+                            Get tips to make resume for company
+                            specific and cover letter.
+                        </p>
+
+                        <span class="card-badge">16 Courses</span>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="category-card"
+                        style="--color: 42, 94%, 55%">
+
+                        <div class="card-icon">
+                            <img
+                                src="./assets/images/category-4.svg"
+                                width="40" height="40"
+                                loading="lazy"
+                                alt="Hybrid Distance Programs"
+                                class="img">
+                        </div>
+
+                        <h3 class="h3">
+                            <a
+                                href="./four.html"
+                                class="card-title">Open Source Program</a>
+                        </h3>
+
+                        <p class="card-text">
+                            Get tips to make resume for company
+                            specific and cover letter.
+                        </p>
+
+                        <span class="card-badge">16 Courses</span>
+
+                    </div>
+                </li>
+
+            </ul>
         </div>
-        <div class="category-card2 card" onclick="window.location.href='offcampus.html'">
-            <h3>Off-Campus Interview</h3>
-        </div>
-    </main>
+    </section>
+
 </body>
 </html>
