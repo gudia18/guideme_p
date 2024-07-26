@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-Campus Interview</title>
+    <link rel="stylesheet" href="notes.css">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1em;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-card1 {
+            background-color: #E8F7F5;
+        }
+
+        .category-card2 {
+            background-color: #FDECEF;
+        }
+
+        /* Other styles */
+        a {
+            color: #1AB79D;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>On-Campus Interview Resources</h1>
+        <p>Find tips and resources for on-campus interviews.</p>
+    </header>
+    <main class="grid-container">
+        <div class="category-card1 card">
+            <h3><a href="https://www.example.com/ontips1" target="_blank">Preparing Your Resume</a></h3>
+        </div>
+        <div class="category-card2 card">
+            <h3><a href="https://www.example.com/ontips2" target="_blank">Common Interview Questions</a></h3>
+        </div>
+        <div class="category-card1 card">
+            <h3><a href="https://www.example.com/ontips3" target="_blank">Interview Etiquette</a></h3>
+        </div>
+        <div class="category-card2 card">
+            <h3><a href="https://www.example.com/ontips4" target="_blank">Follow-Up After Interviews</a></h3>
+        </div>
+    </main>
+</body>
+</html>
